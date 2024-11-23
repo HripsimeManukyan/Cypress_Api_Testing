@@ -45,7 +45,7 @@ describe('RestfulBooker API Tests', () => {
             method: 'POST',
             url: `${baseUrl}${endpoints.booking}`,
             headers: {
-                'Content-Type': 'application/json'
+                Authorization: `Bearer ${token}`
             },
             body: {
                 ...bookingBody,
