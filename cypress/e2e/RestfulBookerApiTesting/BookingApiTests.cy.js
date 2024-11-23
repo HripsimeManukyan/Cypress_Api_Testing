@@ -70,6 +70,8 @@ describe('RestfulBooker API Tests', () => {
             expect(response.status).to.eql(200)
             expect(response.body.firstname).to.eq(firstName)
             expect(response.body.lastname).to.eq(lastName)
+            expect(response.body).to.have.property('firstname')
+            expect(response.body).to.have.property('lastname')
             expect(response.body.additionalneeds).to.eq('Breakfast')
         })
     })
